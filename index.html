@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Investment Application</title>
+    <script src="js/investment/InvestmentApplication.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form>
+
+        <label for="lumpSumDate">Lump Sum Date</label>
+        <input id="lumpSumDate" name="lumpSumDate" type="number" value="8" />
+
+        <label for="lumpSumAmount">Lump Sum Amount</label>
+        <input id="lumpSumAmount" name="lumpSumDate" type="number" value="20000" />
+
+        <label for="debitOrderAmount">Debit order amount</label>
+        <input id="debitOrderAmount" name="lumpSumDate"  type="number" value="2500" />
+
+        <label for="debitOrderStartDate">Debit order start date</label>
+        <input id="debitOrderStartDate" name="lumpSumDate"  type="number" value="9" />
+
+        <input type="button" value="Submit" onclick=" new InvestmentApplication(
+                document.getElementById('lumpSumDate').value,
+                document.getElementById('lumpSumAmount').value,
+                document.getElementById('debitOrderStartDate').value,
+                document.getElementById('debitOrderAmount').value
+            )
+        ">
+
+    </form>
+    <div id="output">
+        <!-- Output results from submitted input here -->
+    </div>
+
+</body>
+</html>
